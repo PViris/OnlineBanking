@@ -23,7 +23,7 @@ public class AccountServiceImpl implements AccountService {
 	
 	private static final String ACCOUNT = "Account";
 	private static final String FINISHED = "Finished";
-
+	//Service
 	private static int nextAccountNumber = 11223145;
 
     @Autowired
