@@ -4,7 +4,10 @@ import java.security.Principal;
 
 import com.userfront.domain.PrimaryAccount;
 import com.userfront.domain.SavingsAccount;
-
+/**
+ * @author punit.gautam
+ *
+ */
 public interface AccountService {
 	
     PrimaryAccount createPrimaryAccount();

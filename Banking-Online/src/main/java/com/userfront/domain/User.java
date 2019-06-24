@@ -21,7 +21,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.userfront.domain.security.Authority;
 import com.userfront.domain.security.UserRole;
-
+/**
+ * @author punit.gautam
+ *
+ */
 @Entity
 public class User implements UserDetails{
 

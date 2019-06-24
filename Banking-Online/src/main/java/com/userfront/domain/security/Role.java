@@ -3,7 +3,10 @@ package com.userfront.domain.security;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * @author punit.gautam
+ *
+ */
 @Entity
 public class Role {
 

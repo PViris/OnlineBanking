@@ -8,7 +8,10 @@ import com.userfront.domain.PrimaryTransaction;
 import com.userfront.domain.Recipient;
 import com.userfront.domain.SavingsAccount;
 import com.userfront.domain.SavingsTransaction;
-
+/**
+ * @author punit.gautam
+ *
+ */
 public interface TransactionService {
     
 	List<PrimaryTransaction> findPrimaryTransactionList(String username);

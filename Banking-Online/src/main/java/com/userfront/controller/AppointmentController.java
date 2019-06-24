@@ -19,6 +19,11 @@ import com.userfront.domain.User;
 import com.userfront.service.AppointmentService;
 import com.userfront.service.UserService;
 
+/**
+ * @author punit.gautam
+ *
+ */
+
 @Controller
 @RequestMapping("/appointment")
 public class AppointmentController {

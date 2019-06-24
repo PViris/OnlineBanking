@@ -5,7 +5,10 @@ import java.util.Set;
 
 import com.userfront.domain.User;
 import com.userfront.domain.security.UserRole;
-
+/**
+ * @author punit.gautam
+ *
+ */
 public interface UserService {
 	
     User findByUsername(String username);

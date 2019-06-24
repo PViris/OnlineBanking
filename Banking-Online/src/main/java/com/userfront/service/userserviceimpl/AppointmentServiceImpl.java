@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 import com.userfront.dao.AppointmentDao;
 import com.userfront.domain.Appointment;
 import com.userfront.service.AppointmentService;
-
+/**
+ * @author punit.gautam
+ *
+ */
 @Service
 public class AppointmentServiceImpl implements AppointmentService {
 

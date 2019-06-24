@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.userfront.domain.User;
 import com.userfront.service.UserService;
 
+/**
+ * @author punit.gautam
+ *
+ */
+
 @Controller
 @RequestMapping("/user")
 public class UserController {

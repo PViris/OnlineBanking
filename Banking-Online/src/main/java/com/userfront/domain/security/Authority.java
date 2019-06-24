@@ -1,7 +1,10 @@
 package com.userfront.domain.security;
 
 import org.springframework.security.core.GrantedAuthority;
-
+/**
+ * @author punit.gautam
+ *
+ */
 public class Authority implements GrantedAuthority{
 
     private final String authority;

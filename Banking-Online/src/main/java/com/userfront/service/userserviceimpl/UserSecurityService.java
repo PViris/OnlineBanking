@@ -10,7 +10,10 @@ import org.springframework.stereotype.Service;
 
 import com.userfront.dao.UserDao;
 import com.userfront.domain.User;
-
+/**
+ * @author punit.gautam
+ *
+ */
 @Service
 public class UserSecurityService implements UserDetailsService {
 

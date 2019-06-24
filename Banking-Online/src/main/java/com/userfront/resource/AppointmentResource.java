@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.userfront.domain.Appointment;
 import com.userfront.service.AppointmentService;
-
+/**
+ * @author punit.gautam
+ *
+ */
 @RestController
 @RequestMapping("/api/appointment")
 @PreAuthorize("hasRole('ADMIN')")

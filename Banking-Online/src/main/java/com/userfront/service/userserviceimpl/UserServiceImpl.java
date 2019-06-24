@@ -16,7 +16,10 @@ import com.userfront.domain.User;
 import com.userfront.domain.security.UserRole;
 import com.userfront.service.AccountService;
 import com.userfront.service.UserService;
-
+/**
+ * @author punit.gautam
+ *
+ */
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {

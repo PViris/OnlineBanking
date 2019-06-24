@@ -3,7 +3,10 @@ package com.userfront.domain.security;
 import com.userfront.domain.User;
 
 import javax.persistence.*;
-
+/**
+ * @author punit.gautam
+ *
+ */
 @Entity
 @Table(name="user_role")
 public class UserRole {

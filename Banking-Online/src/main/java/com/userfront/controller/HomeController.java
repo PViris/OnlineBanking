@@ -18,6 +18,11 @@ import com.userfront.domain.User;
 import com.userfront.domain.security.UserRole;
 import com.userfront.service.UserService;
 
+/**
+ * @author punit.gautam
+ *
+ */
+
 @Controller
 public class HomeController {
 	
