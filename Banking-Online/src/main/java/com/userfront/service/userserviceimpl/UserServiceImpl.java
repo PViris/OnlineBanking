@@ -24,7 +24,7 @@ import com.userfront.service.UserService;
 @Transactional
 public class UserServiceImpl implements UserService {
 	
-	private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
 	
 	@Autowired
 	private UserDao userDao;
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
         User localUser = userDao.findByUsername(user.getUsername());
 
         if (localUser != null) {
-            LOG.info("User with username {} already exist. Nothing will be done. ", user.getUsername());
+            LOGGER.info("User with username {} already exist. Nothing will be done. ", user.getUsername());
         } else {
             String encryptedPassword = passwordEncoder.encode(user.getPassword());
             user.setPassword(encryptedPassword);
@@ -76,27 +76,15 @@ public class UserServiceImpl implements UserService {
     }
     
     public boolean checkUserExists(String username, String email){
-        if (checkUsernameExists(username) || checkEmailExists(username)) {
-            return true;
-        } else {
-            return false;
-        }
+		return checkUsernameExists(username) || checkEmailExists(username);
     }
 
     public boolean checkUsernameExists(String username) {
-        if (null != findByUsername(username)) {
-            return true;
-        }
-
-        return false;
-    }
+        return null != findByUsername(username);
+      }
     
     public boolean checkEmailExists(String email) {
-        if (null != findByEmail(email)) {
-            return true;
-        }
-
-        return false;
+        return null != findByEmail(email);
     }
 
     public User saveUser (User user) {
@@ -116,8 +104,8 @@ public class UserServiceImpl implements UserService {
     public void disableUser (String username) {
         User user = findByUsername(username);
         user.setEnabled(false);
-        System.out.println(user.isEnabled());
+        LOGGER.info("IsEnable Status: {}",user.isEnabled());
         userDao.save(user);
-        System.out.println(username + " is disabled.");
+        LOGGER.info(username, "{} is disabled.");
     }
 }

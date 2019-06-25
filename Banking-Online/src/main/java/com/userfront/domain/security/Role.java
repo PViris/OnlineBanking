@@ -1,6 +1,8 @@
 package com.userfront.domain.security;
 
 import javax.persistence.*;
+
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 /**
@@ -8,9 +10,11 @@ import java.util.Set;
  *
  */
 @Entity
-public class Role {
+public class Role implements Serializable{
 
-    @Id
+	private static final long serialVersionUID = 5535028424447510521L;
+
+	@Id
     private int roleId;
 
     private String name;
@@ -19,7 +23,7 @@ public class Role {
     private Set<UserRole> userRoles = new HashSet<>();
 
     public Role() {
-
+    	throw new UnsupportedOperationException();
     }
 
     public int getRoleId() {

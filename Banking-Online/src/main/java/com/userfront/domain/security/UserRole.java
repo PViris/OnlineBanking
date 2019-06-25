@@ -2,6 +2,8 @@ package com.userfront.domain.security;
 
 import com.userfront.domain.User;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 /**
  * @author punit.gautam
@@ -9,9 +11,11 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="user_role")
-public class UserRole {
+public class UserRole implements Serializable{
     
-    @Id
+	private static final long serialVersionUID = 5126029634434959615L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long userRoleId;
 

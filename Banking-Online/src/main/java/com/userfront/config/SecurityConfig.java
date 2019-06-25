@@ -23,9 +23,6 @@ import com.userfront.service.userserviceimpl.UserSecurityService;
 @EnableGlobalMethodSecurity(prePostEnabled=true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Autowired
-//    private Environment env;
-
     @Autowired
     private UserSecurityService userSecurityService;
 

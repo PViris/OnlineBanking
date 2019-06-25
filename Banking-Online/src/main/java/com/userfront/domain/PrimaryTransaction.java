@@ -1,5 +1,6 @@
 package com.userfront.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -14,9 +15,10 @@ import javax.persistence.ManyToOne;
  *
  */
 @Entity
-public class PrimaryTransaction {
-
-    @Id
+public class PrimaryTransaction implements Serializable{
+	
+	private static final long serialVersionUID = 7963846536767245099L;
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Date date;

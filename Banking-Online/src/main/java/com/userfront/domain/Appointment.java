@@ -1,5 +1,6 @@
 package com.userfront.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -13,9 +14,10 @@ import javax.persistence.ManyToOne;
  *
  */
 @Entity
-public class Appointment {
+public class Appointment implements Serializable{
 
-    @Id
+	private static final long serialVersionUID = 7670583908829762544L;
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Date date;

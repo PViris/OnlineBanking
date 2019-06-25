@@ -28,7 +28,8 @@ import com.userfront.domain.security.UserRole;
 @Entity
 public class User implements UserDetails{
 
-    @Id
+    private static final long serialVersionUID = -5269822550888855768L;
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "userId", nullable = false, updatable = false)
     private Long userId;
@@ -185,19 +186,16 @@ public class User implements UserDetails{
 
     @Override
     public boolean isAccountNonExpired() {
-        // TODO Auto-generated method stub
         return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        // TODO Auto-generated method stub
         return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        // TODO Auto-generated method stub
         return true;
     }
 

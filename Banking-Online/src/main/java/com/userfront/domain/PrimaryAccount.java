@@ -1,5 +1,6 @@
 package com.userfront.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -17,9 +18,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  */
 @Entity
-public class PrimaryAccount {
+public class PrimaryAccount implements Serializable{
 
-    @Id
+	private static final long serialVersionUID = 354644986635191771L;
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private int accountNumber;

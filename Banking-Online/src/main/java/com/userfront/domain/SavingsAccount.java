@@ -1,5 +1,6 @@
 package com.userfront.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -17,8 +18,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  */
 @Entity
-public class SavingsAccount {
-
+public class SavingsAccount implements Serializable{
+	private static final long serialVersionUID = 2405172001950251807L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -61,5 +62,10 @@ public class SavingsAccount {
         this.savingsTransactionList = savingsTransactionList;
     }
 
-
+	/**
+	 * @return the serialversionuid
+	 */
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 }
