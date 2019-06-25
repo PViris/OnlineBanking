@@ -22,8 +22,7 @@ public class Role implements Serializable{
     @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<UserRole> userRoles = new HashSet<>();
 
-    public Role() {
-    	throw new UnsupportedOperationException();
+    public Role() { //NOSONAR
     }
 
     public int getRoleId() {
